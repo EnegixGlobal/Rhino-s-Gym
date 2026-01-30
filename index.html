@@ -94,7 +94,7 @@
       .navbar {
         background: rgba(10, 14, 18, 0.95) !important;
         backdrop-filter: blur(10px);
-        padding: 1 rem 0;
+        padding: 1rem 0;
         transition: all 0.3s ease;
         box-shadow: 0 2px 20px rgba(77, 122, 145, 0.15);
       }
@@ -918,13 +918,36 @@
       }
 
       /* Responsive */
+      @media (max-width: 991px) {
+        .why-grid {
+          gap: 2rem;
+        }
+      }
+
       @media (max-width: 768px) {
         body {
           padding-top: 70px;
         }
 
+        .navbar-brand {
+          font-size: 1.8rem;
+          letter-spacing: 2px;
+        }
+
+        .navbar-brand img {
+          width: 40px;
+          height: 40px;
+        }
+
+        .nav-link {
+          font-size: 1rem;
+          margin: 0.5rem 0;
+        }
+
         .hero-section {
-          height: calc(100vh - 70px);
+          height: auto;
+          min-height: calc(100vh - 70px);
+          padding: 3rem 0;
         }
 
         .hero-title {
@@ -934,26 +957,164 @@
 
         .hero-subtitle {
           font-size: 1.2rem;
+          letter-spacing: 2px;
         }
 
         .hero-description {
           font-size: 1rem;
+          margin-bottom: 2rem;
         }
 
-        .section-title {
-          font-size: 3rem;
-        }
-
-        .why-grid {
-          grid-template-columns: 1fr;
+        .btn-hero {
+          padding: 1rem 2rem;
+          font-size: 1rem;
         }
 
         .hero-stats {
           gap: 2rem;
+          margin-top: 3rem;
         }
 
         .stat-number {
           font-size: 2.5rem;
+        }
+
+        .stat-label {
+          font-size: 0.9rem;
+        }
+
+        .floating-element {
+          display: none;
+        }
+
+        .features-section,
+        .why-section,
+        .transformation-section,
+        .trainers-section {
+          padding: 4rem 0;
+        }
+
+        .section-title {
+          font-size: 3rem;
+          letter-spacing: 3px;
+        }
+
+        .section-subtitle {
+          font-size: 1.1rem;
+          margin-bottom: 3rem;
+        }
+
+        .feature-card {
+          padding: 2rem 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .feature-icon {
+          font-size: 3rem;
+        }
+
+        .feature-title {
+          font-size: 1.4rem;
+        }
+
+        .feature-description {
+          font-size: 1rem;
+        }
+
+        .why-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+          margin-top: 2rem;
+        }
+
+        .why-item {
+          padding: 1.5rem;
+          gap: 1.5rem;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .why-item:hover {
+          transform: translateX(0);
+          transform: translateY(-10px);
+        }
+
+        .why-number {
+          font-size: 3rem;
+          min-width: auto;
+        }
+
+        .why-content h3 {
+          font-size: 1.3rem;
+        }
+
+        .why-content p {
+          font-size: 1rem;
+        }
+
+        .transformation-card img,
+        .trainer-image {
+          height: 300px;
+        }
+
+        .transformation-overlay h4,
+        .trainer-name {
+          font-size: 1.3rem;
+        }
+
+        .transformation-overlay p,
+        .trainer-specialty {
+          font-size: 1rem;
+        }
+
+        .cta-section {
+          padding: 4rem 0;
+        }
+
+        .cta-title {
+          font-size: 2.5rem;
+          letter-spacing: 3px;
+        }
+
+        .cta-description {
+          font-size: 1.1rem;
+          margin-bottom: 2rem;
+        }
+
+        .btn-cta {
+          padding: 1rem 2rem;
+          font-size: 1rem;
+        }
+
+        footer {
+          padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+          gap: 2rem;
+        }
+
+        .footer-section h3 {
+          font-size: 1.3rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero-title {
+          font-size: 2.5rem;
+          letter-spacing: 3px;
+        }
+
+        .hero-subtitle {
+          font-size: 1rem;
+        }
+
+        .section-title {
+          font-size: 2.5rem;
+        }
+
+        .cta-title {
+          font-size: 2rem;
         }
       }
 
@@ -1562,8 +1723,10 @@
           if (current >= target) {
             current = target;
             clearInterval(timer);
+            element.textContent = Math.floor(current) + "+";
+          } else {
+            element.textContent = Math.floor(current) + "+";
           }
-          element.textContent = Math.floor(current) + "+";
         }, 16);
       }
 
