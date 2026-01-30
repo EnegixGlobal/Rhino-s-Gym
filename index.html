@@ -1,0 +1,1592 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Rhino's GYM - Best Gym in Patna | Fitness Center | Personal Training
+    </title>
+    <meta
+      name="description"
+      content="Rhino's GYM Patna - Premium fitness center with 24/7 access, expert personal trainers, modern equipment, group classes, yoga, bodybuilding, and weight loss programs. Transform your body today!"
+    />
+    <meta
+      name="keywords"
+      content="gym in Patna, fitness center Patna, best gym, personal training, bodybuilding, weight loss, CrossFit, yoga classes, HIIT training, strength training, cardio workout, gym membership, fitness club"
+    />
+    <meta name="author" content="Rhino's GYM" />
+    <meta
+      property="og:title"
+      content="Rhino's GYM - Best Gym & Fitness Center in Patna"
+    />
+    <meta
+      property="og:description"
+      content="Join Patna's premier gym with state-of-the-art equipment, expert trainers, and 24/7 access. Start your fitness transformation today!"
+    />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.rhinosgym.com/" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        /* Updated colors to match Rhino logo */
+        --primary-dark: #2d4654; /* Dark blue-gray from rhino */
+        --primary-medium: #4a7189; /* Medium blue from rhino */
+        --primary-light: #7c9fb0; /* Light blue from rhino */
+        --accent-teal: #5a8ca3; /* Teal accent from rhino */
+        --dark-bg: #0a0e12; /* Very dark background */
+        --darker-bg: #050709; /* Darker background */
+        --gray-800: #1a1e24; /* Dark gray */
+        --gray-700: #252b34; /* Medium gray */
+        --text-light: #e8eef2; /* Light text */
+        --white-accent: #f0f5f8; /* Off-white */
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Rajdhani", sans-serif;
+        background: var(--dark-bg);
+        color: var(--text-light);
+        overflow-x: hidden;
+        padding-top: 90px;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--darker-bg);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--primary-medium);
+        border-radius: 5px;
+      }
+
+      /* Navigation */
+      .navbar {
+        background: rgba(10, 14, 18, 0.95) !important;
+        backdrop-filter: blur(10px);
+        padding: 1 rem 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 20px rgba(77, 122, 145, 0.15);
+      }
+
+      .navbar.scrolled {
+        padding: 0.8rem 0;
+        box-shadow: 0 2px 30px rgba(77, 122, 145, 0.3);
+      }
+
+      .navbar-brand {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        background: linear-gradient(
+          135deg,
+          var(--white-accent),
+          var(--primary-light)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 0 30px rgba(124, 159, 176, 0.5);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .navbar-brand img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .navbar-brand:hover {
+        transform: scale(1.05);
+        filter: brightness(1.2);
+      }
+
+      .nav-link {
+        color: var(--text-light) !important;
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin: 0 1rem;
+        position: relative;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+      }
+
+      .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--primary-medium),
+          var(--primary-light)
+        );
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::before {
+        width: 100%;
+      }
+
+      .nav-link:hover {
+        color: var(--primary-light) !important;
+        transform: translateY(-2px);
+      }
+
+      /* Hero Section */
+      .hero-section {
+        position: relative;
+        height: calc(100vh - 90px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          #0a0e12 0%,
+          #1a2532 50%,
+          #0a0e12 100%
+        );
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:
+          linear-gradient(
+            45deg,
+            transparent 30%,
+            rgba(74, 113, 137, 0.15) 50%,
+            transparent 70%
+          ),
+          radial-gradient(
+            circle at 20% 50%,
+            rgba(90, 140, 163, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 50%,
+            rgba(124, 159, 176, 0.1) 0%,
+            transparent 50%
+          );
+        animation: heroGradient 15s ease infinite;
+      }
+
+      @keyframes heroGradient {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          opacity: 0.8;
+          transform: scale(1.1) rotate(5deg);
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 1200px;
+        padding: 0 20px;
+      }
+
+      .hero-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 7rem;
+        font-weight: 700;
+        letter-spacing: 10px;
+        line-height: 1;
+        margin-bottom: 1rem;
+        background: linear-gradient(
+          135deg,
+          #ffffff,
+          var(--primary-light),
+          var(--accent-teal)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 0 80px rgba(124, 159, 176, 0.6);
+        animation: titlePulse 3s ease-in-out infinite;
+      }
+
+      @keyframes titlePulse {
+        0%,
+        100% {
+          transform: scale(1);
+          filter: brightness(1);
+        }
+        50% {
+          transform: scale(1.02);
+          filter: brightness(1.2);
+        }
+      }
+
+      .hero-subtitle {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 300;
+        letter-spacing: 3px;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: var(--primary-light);
+        animation: subtitleGlow 2s ease-in-out infinite;
+      }
+
+      @keyframes subtitleGlow {
+        0%,
+        100% {
+          text-shadow: 0 0 10px rgba(124, 159, 176, 0.5);
+        }
+        50% {
+          text-shadow:
+            0 0 30px rgba(124, 159, 176, 1),
+            0 0 60px rgba(124, 159, 176, 0.5);
+        }
+      }
+
+      .hero-description {
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin-bottom: 3rem;
+        line-height: 1.8;
+        color: var(--text-light);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .btn-hero {
+        padding: 1.2rem 3rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0;
+        background: linear-gradient(
+          135deg,
+          var(--primary-medium),
+          var(--accent-teal)
+        );
+        color: white;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 40px rgba(74, 113, 137, 0.5);
+      }
+
+      .btn-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .btn-hero:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 60px rgba(74, 113, 137, 0.7);
+        background: linear-gradient(
+          135deg,
+          var(--accent-teal),
+          var(--primary-light)
+        );
+      }
+
+      .btn-hero:hover::before {
+        left: 100%;
+      }
+
+      .hero-stats {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        margin-top: 4rem;
+        flex-wrap: wrap;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        background: linear-gradient(
+          135deg,
+          var(--primary-light),
+          var(--accent-teal)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+      }
+
+      .stat-label {
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--text-light);
+        margin-top: 0.5rem;
+      }
+
+      /* Floating Animation Elements */
+      .floating-element {
+        position: absolute;
+        opacity: 0.08;
+        animation: float 20s ease-in-out infinite;
+      }
+
+      .floating-element:nth-child(1) {
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+      }
+
+      .floating-element:nth-child(2) {
+        top: 60%;
+        right: 10%;
+        animation-delay: 5s;
+      }
+
+      .floating-element:nth-child(3) {
+        bottom: 20%;
+        left: 15%;
+        animation-delay: 10s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        33% {
+          transform: translateY(-30px) rotate(10deg);
+        }
+        66% {
+          transform: translateY(30px) rotate(-10deg);
+        }
+      }
+
+      /* Features Section */
+      .features-section {
+        padding: 8rem 0;
+        background: var(--darker-bg);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .features-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          45deg,
+          transparent 40%,
+          rgba(74, 113, 137, 0.05) 50%,
+          transparent 60%
+        );
+        animation: featuresBg 20s ease infinite;
+      }
+
+      @keyframes featuresBg {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(100px);
+        }
+      }
+
+      .section-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: 5px;
+        text-align: center;
+        margin-bottom: 1rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary-light),
+          var(--accent-teal)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 1.3rem;
+        color: var(--text-light);
+        margin-bottom: 5rem;
+        opacity: 0.8;
+      }
+
+      .feature-card {
+        background: linear-gradient(135deg, var(--gray-800), var(--gray-700));
+        padding: 3rem 2rem;
+        border-radius: 0;
+        border: 2px solid transparent;
+        transition: all 0.5s ease;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+      }
+
+      .feature-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          var(--primary-medium),
+          var(--accent-teal)
+        );
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-20px);
+        border-color: var(--primary-medium);
+        box-shadow: 0 20px 60px rgba(74, 113, 137, 0.4);
+      }
+
+      .feature-card:hover::before {
+        opacity: 0.1;
+      }
+
+      .feature-icon {
+        font-size: 4rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary-light),
+          var(--accent-teal)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 2rem;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+
+      .feature-card:hover .feature-icon {
+        transform: scale(1.2) rotate(10deg);
+      }
+
+      .feature-title {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+      }
+
+      .feature-description {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        opacity: 0.9;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Why Choose Us Section */
+      .why-section {
+        padding: 8rem 0;
+        background: var(--dark-bg);
+        position: relative;
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        margin-top: 4rem;
+      }
+
+      .why-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 2rem;
+        background: var(--gray-800);
+        border-left: 5px solid var(--primary-medium);
+        transition: all 0.3s ease;
+      }
+
+      .why-item:hover {
+        transform: translateX(20px);
+        background: var(--gray-700);
+        box-shadow: -5px 0 30px rgba(74, 113, 137, 0.3);
+      }
+
+      .why-number {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        background: linear-gradient(
+          135deg,
+          var(--primary-light),
+          var(--accent-teal)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+        min-width: 80px;
+      }
+
+      .why-content h3 {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+
+      .why-content p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        opacity: 0.9;
+      }
+
+      /* Transformation Section */
+      .transformation-section {
+        padding: 8rem 0;
+        background: linear-gradient(
+          135deg,
+          var(--darker-bg) 0%,
+          var(--gray-800) 50%,
+          var(--darker-bg) 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .transformation-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0;
+        transition: all 0.5s ease;
+      }
+
+      .transformation-card img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        transition: all 0.5s ease;
+      }
+
+      .transformation-card:hover img {
+        transform: scale(1.1);
+      }
+
+      .transformation-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+        transform: translateY(100%);
+        transition: transform 0.5s ease;
+      }
+
+      .transformation-card:hover .transformation-overlay {
+        transform: translateY(0);
+      }
+
+      .transformation-overlay h4 {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+        color: var(--primary-light);
+      }
+
+      .transformation-overlay p {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+      }
+
+      /* Trainers Section */
+      .trainers-section {
+        padding: 8rem 0;
+        background: var(--dark-bg);
+      }
+
+      .trainer-card {
+        position: relative;
+        overflow: hidden;
+        background: var(--gray-800);
+        transition: all 0.5s ease;
+      }
+
+      .trainer-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        transition: all 0.5s ease;
+        filter: grayscale(100%);
+      }
+
+      .trainer-card:hover .trainer-image {
+        filter: grayscale(0%);
+        transform: scale(1.1);
+      }
+
+      .trainer-info {
+        padding: 2rem;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      .trainer-name {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+      }
+
+      .trainer-specialty {
+        font-size: 1.1rem;
+        color: var(--primary-light);
+        margin-bottom: 1rem;
+      }
+
+      .trainer-social {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .trainer-social a {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--gray-700);
+        color: var(--text-light);
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+      }
+
+      .trainer-social a .fa-whatsapp {
+        color: #25d366;
+      }
+
+      .trainer-social a .fa-instagram {
+        color: #e4405f;
+      }
+
+      .trainer-social a .fa-facebook {
+        color: #1877f2;
+      }
+
+      .trainer-social a:hover {
+        background: var(--primary-medium);
+        color: white;
+        border-color: var(--primary-medium);
+        transform: translateY(-5px);
+      }
+
+      /* CTA Section */
+      .cta-section {
+        padding: 8rem 0;
+        background: linear-gradient(
+          135deg,
+          var(--primary-medium),
+          var(--accent-teal)
+        );
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          rgba(0, 0, 0, 0.1) 10px,
+          rgba(0, 0, 0, 0.1) 20px
+        );
+        animation: ctaPattern 20s linear infinite;
+      }
+
+      @keyframes ctaPattern {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(28.28px);
+        }
+      }
+
+      .cta-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .cta-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 4.5rem;
+        font-weight: 700;
+        letter-spacing: 5px;
+        margin-bottom: 1.5rem;
+        color: white;
+        text-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .cta-description {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+        color: white;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .btn-cta {
+        padding: 1.5rem 4rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border: 3px solid white;
+        border-radius: 0;
+        background: transparent;
+        color: white;
+        transition: all 0.3s ease;
+      }
+
+      .btn-cta:hover {
+        background: white;
+        color: var(--primary-medium);
+        transform: scale(1.05);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Footer */
+      footer {
+        background: var(--darker-bg);
+        padding: 4rem 0 2rem;
+        border-top: 3px solid var(--primary-medium);
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .footer-section h3 {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        color: var(--primary-light);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .footer-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .footer-section p,
+      .footer-section a {
+        font-size: 1rem;
+        line-height: 2;
+        color: var(--text-light);
+        opacity: 0.8;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: block;
+      }
+
+      .footer-section a .fa-whatsapp {
+        color: #25d366;
+      }
+
+      .footer-section a .fa-instagram {
+        color: #e4405f;
+      }
+
+      .footer-section a .fa-facebook {
+        color: #1877f2;
+      }
+
+      .footer-section a:hover {
+        color: var(--primary-light);
+        opacity: 1;
+        padding-left: 10px;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid var(--gray-700);
+        opacity: 0.6;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        body {
+          padding-top: 70px;
+        }
+
+        .hero-section {
+          height: calc(100vh - 70px);
+        }
+
+        .hero-title {
+          font-size: 3.5rem;
+          letter-spacing: 5px;
+        }
+
+        .hero-subtitle {
+          font-size: 1.2rem;
+        }
+
+        .hero-description {
+          font-size: 1rem;
+        }
+
+        .section-title {
+          font-size: 3rem;
+        }
+
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-stats {
+          gap: 2rem;
+        }
+
+        .stat-number {
+          font-size: 2.5rem;
+        }
+      }
+
+      /* Scroll Progress Bar */
+      .progress-bar-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--darker-bg);
+        z-index: 9999;
+      }
+
+      .progress-bar {
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          var(--primary-medium),
+          var(--primary-light)
+        );
+        width: 0%;
+        transition: width 0.1s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="rhino_logo.jpeg" alt="Rhino's GYM Logo" />
+          Rhino's GYM
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="floating-element">
+        <i
+          class="fas fa-dumbbell"
+          style="font-size: 15rem; color: var(--primary-medium)"
+        ></i>
+      </div>
+      <div class="floating-element">
+        <i
+          class="fas fa-heart-pulse"
+          style="font-size: 12rem; color: var(--accent-teal)"
+        ></i>
+      </div>
+      <div class="floating-element">
+        <i
+          class="fas fa-fire"
+          style="font-size: 18rem; color: var(--primary-light)"
+        ></i>
+      </div>
+
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+        <h1 class="hero-title" data-aos="zoom-in" data-aos-delay="300">
+          Rhino's GYM
+        </h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">
+          Where Champions Are Built
+        </p>
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="900">
+          Unleash your true potential with cutting-edge fitness equipment,
+          certified expert trainers, and a motivating community that pushes you
+          beyond your limits. This is not just a gym—it's your personal
+          transformation center for bodybuilding, weight loss, and strength
+          training in Patna.
+        </p>
+        <button class="btn btn-hero" data-aos="zoom-in" data-aos-delay="1200">
+          START YOUR FITNESS JOURNEY
+        </button>
+
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="1500">
+          <div class="stat-item">
+            <div class="stat-number counter" data-target="5000">0</div>
+            <div class="stat-label">Active Members</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number counter" data-target="50">0</div>
+            <div class="stat-label">Certified Trainers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number counter" data-target="15">0</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-down">
+          ELITE FITNESS FACILITIES
+        </h2>
+        <p class="section-subtitle" data-aos="fade-up">
+          State-of-the-art gym equipment and world-class fitness amenities in
+          Patna
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-dumbbell"></i>
+              </div>
+              <h3 class="feature-title">Premium Gym Equipment</h3>
+              <p class="feature-description">
+                Access to the latest strength training machines, Olympic free
+                weights, and advanced cardio equipment from top international
+                brands for optimal workout results.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3 class="feature-title">Expert Personal Trainers</h3>
+              <p class="feature-description">
+                Certified fitness professionals with decades of combined
+                experience in bodybuilding, powerlifting, CrossFit, and
+                personalized fitness coaching for all fitness levels.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3 class="feature-title">24/7 Gym Access</h3>
+              <p class="feature-description">
+                Train on your schedule with round-the-clock gym access. Your
+                fitness goals don't sleep, and neither do we. Flexible workout
+                hours for busy professionals.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-spa"></i>
+              </div>
+              <h3 class="feature-title">Recovery & Wellness Zone</h3>
+              <p class="feature-description">
+                Premium sauna, steam room, sports massage therapy, and
+                cryotherapy services to optimize your muscle recovery and
+                enhance athletic performance.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <h3 class="feature-title">Nutrition & Supplement Bar</h3>
+              <p class="feature-description">
+                Fuel your body with protein shakes, healthy pre-workout meals,
+                post-workout nutrition, and premium supplements designed for
+                peak athletic performance.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-people-group"></i>
+              </div>
+              <h3 class="feature-title">Group Fitness Classes</h3>
+              <p class="feature-description">
+                Join exciting group classes: HIIT training, CrossFit, Power
+                Yoga, Zumba dance fitness, aerobics, and more. Led by passionate
+                certified instructors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-down">
+          WHY CHOOSE Rhino's GYM?
+        </h2>
+        <p class="section-subtitle" data-aos="fade-up">
+          We're not just another fitness center. We're Patna's premier fitness
+          movement.
+        </p>
+
+        <div class="why-grid">
+          <div class="why-item" data-aos="fade-right" data-aos-delay="100">
+            <div class="why-number">01</div>
+            <div class="why-content">
+              <h3>Results-Driven Fitness Approach</h3>
+              <p>
+                Every workout program is scientifically designed to deliver
+                measurable fitness results. We track your progress with body
+                composition analysis and adjust your personalized training plan
+                to ensure continuous improvement in strength and health.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item" data-aos="fade-left" data-aos-delay="100">
+            <div class="why-number">02</div>
+            <div class="why-content">
+              <h3>Motivating Fitness Community</h3>
+              <p>
+                Join a tribe of motivated fitness enthusiasts who share your
+                passion for health and wellness. Our community fitness
+                challenges, workout competitions, and group training events keep
+                you engaged and inspired.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item" data-aos="fade-right" data-aos-delay="200">
+            <div class="why-number">03</div>
+            <div class="why-content">
+              <h3>Personalized Training Programs</h3>
+              <p>
+                No cookie-cutter workout routines here. Get customized fitness
+                plans, tailored nutrition guidance, and personal training
+                programs designed for your body type, fitness goals, and
+                lifestyle needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item" data-aos="fade-left" data-aos-delay="200">
+            <div class="why-number">04</div>
+            <div class="why-content">
+              <h3>Cutting-Edge Fitness Technology</h3>
+              <p>
+                Advanced body composition analysis, real-time heart rate
+                monitoring, workout tracking apps, and our exclusive mobile
+                fitness app to monitor every rep, set, and calorie burned during
+                your training.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transformation Section -->
+    <section class="transformation-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-down">
+          FITNESS SUCCESS STORIES
+        </h2>
+        <p class="section-subtitle" data-aos="fade-up">
+          Real members. Real body transformations. Real fitness results achieved
+          at Rhino's GYM Patna.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="transformation-card">
+              <img
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600"
+                alt="Weight Loss Transformation Success Story"
+              />
+              <div class="transformation-overlay">
+                <h4>Mike Johnson</h4>
+                <p>
+                  Lost 50 lbs in 6 months through personalized training | Gained
+                  confidence and muscle strength
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="transformation-card">
+              <img
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600"
+                alt="Fitness Journey Transformation"
+              />
+              <div class="transformation-overlay">
+                <h4>Sarah Williams</h4>
+                <p>
+                  From fitness beginner to marathon runner | Complete lifestyle
+                  transformation through dedicated training
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="transformation-card">
+              <img
+                src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600"
+                alt="Muscle Building Success Story"
+              />
+              <div class="transformation-overlay">
+                <h4>David Chen</h4>
+                <p>
+                  Gained 30 lbs of lean muscle mass | Successfully competed in
+                  bodybuilding competitions
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section class="trainers-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-down">
+          MEET OUR FITNESS EXPERTS
+        </h2>
+        <p class="section-subtitle" data-aos="fade-up">
+          Train with Patna's best certified fitness trainers and personal
+          coaches
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-3" data-aos="flip-left" data-aos-delay="100">
+            <div class="trainer-card">
+              <img
+                src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400"
+                alt="Strength Training Coach Marcus Stone"
+                class="trainer-image"
+              />
+              <div class="trainer-info">
+                <h3 class="trainer-name">Marcus Stone</h3>
+                <p class="trainer-specialty">Strength & Conditioning Coach</p>
+                <div class="trainer-social">
+                  <a
+                    href="https://www.instagram.com/rhinosgymhawainagar"
+                    aria-label="Instagram Profile"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="https://www.facebook.com/rhinossgym/"
+                    aria-label="Facebook Profile"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3" data-aos="flip-left" data-aos-delay="200">
+            <div class="trainer-card">
+              <img
+                src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400"
+                alt="HIIT Trainer Emma Fierce"
+                class="trainer-image"
+              />
+              <div class="trainer-info">
+                <h3 class="trainer-name">Emma Fierce</h3>
+                <p class="trainer-specialty">HIIT & Cardio Specialist</p>
+                <div class="trainer-social">
+                  <a
+                    href="https://www.instagram.com/rhinosgymhawainagar"
+                    aria-label="Instagram Profile"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="https://www.facebook.com/rhinossgym/"
+                    aria-label="Facebook Profile"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3" data-aos="flip-left" data-aos-delay="300">
+            <div class="trainer-card">
+              <img
+                src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400"
+                alt="Bodybuilding Coach Jake Thunder"
+                class="trainer-image"
+              />
+              <div class="trainer-info">
+                <h3 class="trainer-name">Jake Thunder</h3>
+                <p class="trainer-specialty">Bodybuilding Expert</p>
+                <div class="trainer-social">
+                  <a
+                    href="https://www.instagram.com/rhinosgymhawainagar"
+                    aria-label="Instagram Profile"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="https://www.facebook.com/rhinossgym/"
+                    aria-label="Facebook Profile"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3" data-aos="flip-left" data-aos-delay="400">
+            <div class="trainer-card">
+              <img
+                src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400"
+                alt="Yoga Instructor Lisa Power"
+                class="trainer-image"
+              />
+              <div class="trainer-info">
+                <h3 class="trainer-name">Lisa Power</h3>
+                <p class="trainer-specialty">Yoga & Flexibility Trainer</p>
+                <div class="trainer-social">
+                  <a
+                    href="https://www.instagram.com/rhinosgymhawainagar"
+                    aria-label="Instagram Profile"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="https://www.facebook.com/rhinossgym/"
+                    aria-label="Facebook Profile"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2 class="cta-title" data-aos="zoom-in">
+          READY FOR YOUR FITNESS TRANSFORMATION?
+        </h2>
+        <p class="cta-description" data-aos="fade-up" data-aos-delay="200">
+          Stop waiting. Start your fitness journey today. Join Patna's best gym
+          and let your future self thank you.
+        </p>
+        <button class="btn btn-cta" data-aos="zoom-in" data-aos-delay="400">
+          JOIN NOW - LIMITED MEMBERSHIP SPOTS
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>
+              <img
+                src="rhino_logo.jpeg"
+                alt="Rhino's GYM Logo"
+                class="footer-logo"
+              />
+              Rhino's GYM
+            </h3>
+            <p>
+              Where champions are forged through dedication, discipline, and
+              determination.
+            </p>
+            <p>Rajmani Complex, 2nd Floor, Hawai Nagar, Ranchi</p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Opening Hours</h3>
+            <p>Open 24/7 for Members</p>
+            <p>Pre-bookings ongoing</p>
+            <p>Limited slots available</p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>
+              <a
+                href="tel:+916204287103"
+                style="color: inherit; text-decoration: none"
+                ><i class="fas fa-phone"></i> +91 62042 87103</a
+              >
+            </p>
+            <p>
+              <a
+                href="mailto:rhinosgymhawainagar@gmail.com"
+                style="color: inherit; text-decoration: none"
+                ><i class="fas fa-envelope"></i>
+                rhinosgymhawainagar@gmail.com</a
+              >
+            </p>
+            <a href="https://www.instagram.com/rhinosgymhawainagar"
+              ><i class="fab fa-instagram"></i> Instagram</a
+            >
+            <a href="https://www.facebook.com/rhinossgym/"
+              ><i class="fab fa-facebook"></i> Facebook</a
+            >
+            <a
+              href="https://wa.me/916204287103?text=Hello%20Rhino%27s%20GYM%2C%20I%20want%20to%20know%20more%20about%20membership%20and%20services."
+              target="_blank"
+              ><i class="fab fa-whatsapp"></i> WhatsApp</a
+            >
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Rhino's GYM. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+
+      // Navbar Scroll Effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+
+        // Update progress bar
+        const winScroll = document.documentElement.scrollTop;
+        const height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+      });
+
+      // Counter Animation
+      function animateCounter(element) {
+        const target = parseInt(element.getAttribute("data-target"));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          element.textContent = Math.floor(current) + "+";
+        }, 16);
+      }
+
+      // Intersection Observer for Counters
+      const observerOptions = {
+        threshold: 0.5,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (
+            entry.isIntersecting &&
+            !entry.target.classList.contains("counted")
+          ) {
+            animateCounter(entry.target);
+            entry.target.classList.add("counted");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".counter").forEach((counter) => {
+        observer.observe(counter);
+      });
+    </script>
+  </body>
+</html>
